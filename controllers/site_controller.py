@@ -1,0 +1,132 @@
+class SiteController:
+    def index (self, request, response):
+        response.text = """
+        <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg bg-warning-subtle  ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Хлеб</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Хлеб?</a>
+        </li>
+    </div>
+  </div>
+    </nav>
+
+    <div class="List container ">
+        <div class="row ">
+                    <div class="card col m-4" style="width: 18rem;">
+  <img src="https://static.tildacdn.com/tild6333-3634-4561-b132-383361313237/Group_125.png" class="card-img-top p-2" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Вы когда-нибудь ели настоящий хлеб?</h5>
+    <p class="card-text">Настоящий хлеб это столь нечто особенное, что каждый человек должен попробывать это </p>
+    <a href="#" class="btn btn-primary" style="background-color: brown; border-color: brown;">Хотели бы Вы купить настоящий хлеб?</a>
+  </div>
+        </div>
+                            <div class="card col m-4" style="width: 18rem;">
+  <img src="https://static.tildacdn.com/tild6333-3634-4561-b132-383361313237/Group_125.png" class="card-img-top p-2" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Вы когда-нибудь ели настоящий хлеб?</h5>
+    <p class="card-text">Настоящий хлеб это столь нечто особенное, что каждый человек должен попробывать это </p>
+    <a href="#" class="btn btn-primary" style="background-color: brown; border-color: brown;">Хотели бы Вы купить настоящий хлеб?</a>
+  </div>
+        </div>
+                           <div class="card col m-4" style="width: 18rem;">
+  <img src="https://static.tildacdn.com/tild6333-3634-4561-b132-383361313237/Group_125.png" class="card-img-top p-2" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Вы когда-нибудь ели настоящий хлеб?</h5>
+    <p class="card-text">Настоящий хлеб это столь нечто особенное, что каждый человек должен попробывать это </p>
+    <a href="#" class="btn btn-primary" style="background-color: brown; border-color: brown;">Хотели бы Вы купить настоящий хлеб?</a>
+  </div>
+        </div>
+        </div>
+        <div class="row ">
+                    <div class="card col m-4" style="width: 18rem;">
+  <img src="https://static.tildacdn.com/tild6333-3634-4561-b132-383361313237/Group_125.png" class="card-img-top p-2" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Вы когда-нибудь ели настоящий хлеб?</h5>
+    <p class="card-text">Настоящий хлеб это столь нечто особенное, что каждый человек должен попробывать это </p>
+    <a href="#" class="btn btn-primary" style="background-color: brown; border-color: brown;">Хотели бы Вы купить настоящий хлеб?</a>
+  </div>
+        </div>
+                            <div class="card col m-4" style="width: 18rem;">
+  <img src="https://static.tildacdn.com/tild6333-3634-4561-b132-383361313237/Group_125.png" class="card-img-top p-2" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Вы когда-нибудь ели настоящий хлеб?</h5>
+    <p class="card-text">Настоящий хлеб это столь нечто особенное, что каждый человек должен попробывать это </p>
+    <a href="#" class="btn btn-primary" style="background-color: brown; border-color: brown;">Хотели бы Вы купить настоящий хлеб?</a>
+  </div>
+        </div>
+                           <div class="card col m-4" style="width: 18rem;">
+  <img src="https://static.tildacdn.com/tild6333-3634-4561-b132-383361313237/Group_125.png" class="card-img-top p-2" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Вы когда-нибудь ели настоящий хлеб?</h5>
+    <p class="card-text">Настоящий хлеб это столь нечто особенное, что каждый человек должен попробывать это </p>
+    <a href="#" class="btn btn-primary" style="background-color: brown; border-color: brown;">Хотели бы Вы купить настоящий хлеб?</a>
+  </div>
+        </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="bg-warning-subtle">
+                    <div class="container ">
+                    <div class="row">
+        <div class="col">
+            <h3>О гас</h3>
+            <ul>
+                <li>GHbdtn</li>
+                <li>GHbdtn</li>
+                <li>GHbdtn</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>О гас</h3>
+            <ul>
+                <li>GHbdtn</li>
+                <li>GHbdtn</li>
+                <li>GHbdtn</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>О гас</h3>
+            <ul>
+                <li>GHbdtn</li>
+                <li>GHbdtn</li>
+                <li>GHbdtn</li>
+            </ul>
+        </div>
+
+        </div>
+        </div>
+        </div>
+
+    </footer>
+</body>
+</html>
+        
+        
+        
+        
+        
+        
+        
+        
+        """
+
+    def about (self, request, response):
+        response.text = "About страница"
