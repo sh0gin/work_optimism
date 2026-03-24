@@ -10,3 +10,6 @@ class SiteController:
 
   def about (self, request, response):
     response.text = self.view.render_html('site/about.html', {'title' : 'MVC фрейворк', 'h1' : 'Страницы о нас'})
+
+  def hello(self, request, response, user_name):
+    response.text = self.view.render_html('site/hello.html', {'title' : 'MVC фрейворк', 'h1' : 'Приветствие', 'user' : user_name})

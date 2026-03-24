@@ -6,5 +6,6 @@ routes = {
     '/about': [SiteController, SiteController.about],
     '/test-action': [TestController, TestController.action],
     '/test': [TestController, TestController.test],
+    r"^/hello/(.*)$": [SiteController, SiteController.hello],
     # '/articles': articles,
 }
