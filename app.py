@@ -1,9 +1,12 @@
 from webob import Request, Response
+from whitenoise import WhiteNoise
 import routes
 
 class API:
-    def __init__(self):
+    def __init__(self, static_dir="assets"):
         self.routes = routes.routes
+        self.whitenoise = WhiteNoise(self.wsgi_app,
+        root=static_dir)
 
     def wsgi_app(self, environ, start_response):
         request = Request(environ)
@@ -24,7 +27,7 @@ class API:
         handler = self.find_handler(request_path=request.path)
         
         if handler is not None:
-            controller = handler[0]
+            controller = handler[0]()
             action = handler[1]
             action(controller, request, response)
         else:
