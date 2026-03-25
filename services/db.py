@@ -10,5 +10,6 @@ class Db:
         rows = cursor.execute(sql, params).fetchall()
         items = []
         for row in rows:
+            item = dict(row)
             items.append(dict())
         return items
