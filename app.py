@@ -28,7 +28,7 @@ class API:
     def handle_request(self, request):
         response = Response()
         
-        result = self.find_handler_re(request_path=request.path)
+        result = self.find_handler(request_path=request.path)
 
         if result is not None:
             handler, params = result

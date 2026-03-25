@@ -1,11 +1,13 @@
-from views.view import View
+from controllers.controller import Controller
+from services.db import Db
 
-class SiteController:
-  def __init__(self):
-    self.layout = 'default'
-    self.view = View(self.layout)
+class SiteController(Controller):
     
   def index(self, request, response):
+    print(123)
+    db = Db()
+    items = db.query("SELECT * FROM 'articles'")
+    print(items)
     response.text = self.view.render_html('site/index.html', {'title' : 'MVC фрейворк', 'h1' : 'Главная страницы'})
 
   def about (self, request, response):
