@@ -3,11 +3,11 @@ from controllers.test_controller import TestController
 from controllers.articles_controller import ArticlesController
 
 routes = {
-    '/articles': [ArticlesController, ArticlesController.index],
-    '/home': [SiteController, SiteController.index],
-    '/about': [SiteController, SiteController.about],
-    '/test-action': [TestController, TestController.action],
-    '/test': [TestController, TestController.test],
-    r"^/hello/(.*)$": [SiteController, SiteController.hello],
-    # '/articles': articles,
+    r'^/article/(\d+)$': [ArticlesController, ArticlesController.view],
+    r'^/articles$': [ArticlesController, ArticlesController.index],
+    r'^/home$': [SiteController, SiteController.index],
+    r'^/about$': [SiteController, SiteController.about],
+    r'^/hello/(.*)$': [SiteController, SiteController.hello],
+    r'^/test$': [TestController, TestController.test],
+    r'^/action$': [TestController, TestController.action],
 }

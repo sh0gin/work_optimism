@@ -1,4 +1,4 @@
-import os
+import os 
 import re
 
 from webob import Request, Response
@@ -16,25 +16,21 @@ class API:
 
         response = self.handle_request(request)
 
-        return response(environ, start_response) 
+        return response(environ, start_response)
 
     def __call__(self, environ, start_response):
-        request= Request(environ)
-        
-        response = self.handle_request(request)
 
-        return response(environ, start_response)
+        return self.whitenoise(environ, start_response)
     
     def handle_request(self, request):
         response = Response()
+        result = self.find_handler_re(request_path=request.path)
         
-        result = self.find_handler(request_path=request.path)
-
         if result is not None:
             handler, params = result
             controller = handler[0]()
             action = handler[1]
-            action(controller, request, response)
+            action(controller, request, response, *params)
         else:
             self.default_response(response)
         # response.text = f"ПРивет, ты запростл страницу {requset_url}"
@@ -42,7 +38,12 @@ class API:
 
     def find_handler(self, request_path):
         for path, handler in self.routes.items():
-            match = re.search(path,request_path)
+            if path == request_path:
+                return handler
+
+    def find_handler_re(self, request_path):
+        for path, handler in self.routes.items():
+            match = re.search(path, request_path)
             if match is not None:
                 return handler, match.groups()
 
