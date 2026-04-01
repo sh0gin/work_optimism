@@ -1,13 +1,45 @@
+# from webob import Request, Response
+
+# class API:
+#     def __init__(self):
+#           self.route = {}
+#     def __call__(self, environ, start_response):
+#             request = Request(environ)
+#             response = self.handle_request(request)
+
+#             return response(environ, start_response)
+#     def handle_request(self, request):
+#           response = Response()
+#           request_url = request.environ.get("REQUEST_URI")
+#           response.text = f"Привет, ты запросил страницу {request_url}"
+#           return response
+#     def route(self, path):
+#           def wrapper(handler):
+#                 self.routes[path] = handler
+#                 return handler
+#           return wrapper
+          
+
+# app = API()
+
+# @app.route('/home')
+# def home (request, response):
+#       response.text = "Привет с главной страницы"
+
+# @app.route('/about')
+# def about (request, response):
+#       response.text = "Привет со страницы about"
+
 import os 
 import re
+import route
 
 from webob import Request, Response
 from whitenoise import WhiteNoise
-import routes
 
 class API:
     def __init__(self, static_dir="assets"):
-        self.routes = routes.routes
+        self.routes = route.routes
         self.whitenoise = WhiteNoise(self.wsgi_app,
         root=static_dir)
 

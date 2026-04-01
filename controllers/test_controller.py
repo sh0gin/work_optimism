@@ -1,8 +1,6 @@
 from controllers.controller import Controller
 
 class TestController(Controller):
-
-
     def test (self, request, response):
         response.text = self.view.render_html('test/test.html', 
         {

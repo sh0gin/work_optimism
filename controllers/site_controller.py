@@ -1,10 +1,9 @@
 from controllers.controller import Controller
 
 
-
 class SiteController(Controller):
-
     def index (self, request, response):
+
         response.text = self.view.render_html('site/index.html', 
         {
           'title': 'MVC Framework',

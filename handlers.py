@@ -1,9 +1,7 @@
 def home(request, response):
-    response.text = "ПАривентс главний сьраницы"
+    response.text = "Привет с домашней страницы"
 
 
 def about(request, response):
-    response.text = "ПАривентс сщ страницы about"
+    response.text = "Привет со страницы about"
 
-# def articles(request, response):
-#     response.text = "Hi from articles"
