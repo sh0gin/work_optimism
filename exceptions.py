@@ -1,0 +1,2 @@
+ass NotFoundException(Exception):
+    pass
